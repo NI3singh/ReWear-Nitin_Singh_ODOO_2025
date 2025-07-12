@@ -1,7 +1,9 @@
 import AdminLayout from "../components/admin/AdminLayout";
 import ManageUsers from "../components/admin/ManageUsers";
+import { useQuery, useMutation } from "@tanstack/react-query";
 import { Package, ShoppingBag } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import toast from "react-hot-toast";
 
 const AdminPanel = () => {
   const activeSection = "users"; // useState not needed unless this will change
@@ -47,6 +49,31 @@ const AdminPanel = () => {
           </div>
         );
       default:
+        // Fetch users data
+        const { data: users, isLoading, isError, refetch } = useQuery({
+ queryKey: ["allUsers"],
+ queryFn: getAllUsers,
+    });
+
+        // Mutation for deleting a user
+        const deleteUserMutation = useMutation({
+ mutationFn: deleteUser,
+          onSuccess: () => {
+ toast.success("User deleted successfully!");
+            refetch(); // Refetch users after deletion
+          },
+          onError: (error) => {
+ toast.error(error.response.data.message || "Failed to delete user.");
+          },
+        });
+
+        // Mutation for deleting an item (assuming an item management section exists or will exist)
+        const deleteItemMutation = useMutation({
+ mutationFn: deleteItem, // You would need an actual deleteItem function
+ onSuccess: () => {
+ toast.success("Item deleted successfully!");
+          },
+        });
         return <ManageUsers />;
     }
   };

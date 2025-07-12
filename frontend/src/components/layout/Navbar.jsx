@@ -16,6 +16,7 @@ export default function Navbar() {
         { to: "/", label: "Home" },
         { to: "/login", label: "Login" },
         { to: "/register", label: "Register" },
+        { to: "/admin", label: "Admin" },
       ];
 
   return (
