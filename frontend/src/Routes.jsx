@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import SwipeCards from "./pages/Swipe";
 import Dashboard from "./pages/Dashboard";
 import AuthForm from "./pages/AuthForm";
+import ReWearLanding from "./pages/Home";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const Routes = () => {
         <BrowserRouter>
           {/* ✅ Use RouterRoutes, not Routes */}
           <RouterRoutes>
+            <Route path="/" element={<ReWearLanding />} />
             <Route path="/admin" element={<AdminPanel />} />
             <Route path="/swipe" element={<SwipeCards />} />
             <Route path="/dashboard" element={<Dashboard />} />
