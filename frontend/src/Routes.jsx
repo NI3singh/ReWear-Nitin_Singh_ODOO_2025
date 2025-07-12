@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import AdminPanel from "./pages/AdminPanel";
 import NotFound from "./pages/NotFound";
+import SwipeCards from "./pages/Swipe";
+import Dashboard from "./pages/Dashboard";
+import AuthForm from "./pages/AuthForm";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +22,9 @@ const Routes = () => {
           {/* ✅ Use RouterRoutes, not Routes */}
           <RouterRoutes>
             <Route path="/admin" element={<AdminPanel />} />
+            <Route path="/swipe" element={<SwipeCards />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/auth" element={<AuthForm />} />
             <Route path="*" element={<NotFound />} />
           </RouterRoutes>
         </BrowserRouter>
