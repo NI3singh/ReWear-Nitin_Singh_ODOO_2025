@@ -1,13 +1,11 @@
-import Router from "./router";
-import { Toaster } from "react-hot-toast";
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./styles/App.css";
+import Routes from "./Routes";
 
 function App() {
-  return (
-    <>
-      <Toaster position="top-right" />
-      <Router />
-    </>
-  );
+  return <Routes />;
 }
 
 export default App;
