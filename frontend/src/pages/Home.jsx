@@ -119,10 +119,12 @@ const ReWearLanding = () => {
                   Start Swapping
                 </button>
               </Link>
+              <Link to="/items">
                 <button className="border-2 border-maroon-600 text-maroon-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-maroon-50 transition-all flex items-center justify-center gap-2">
                   Browse Items
                   <ArrowRight className="w-5 h-5" />
                 </button>
+              </Link>
               </div>
 
               <div className="flex items-center gap-2 text-sm text-gray-500">

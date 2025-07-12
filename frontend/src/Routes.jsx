@@ -13,6 +13,7 @@ import ReWearLanding from "./pages/Home";
 import Layout from "./components/layout/Layout";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ItemDetail from "./pages/ItemDetail";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const Routes = () => {
           <Layout>
             <RouterRoutes>
               <Route path="/" element={<ReWearLanding />} />
+              <Route path="/items" element={<ItemDetail />} />
               <Route path="/admin" element={<AdminPanel />} />
               <Route path="/swipe" element={<SwipeCards />} />
               <Route path="/dashboard" element={<Dashboard />} />
