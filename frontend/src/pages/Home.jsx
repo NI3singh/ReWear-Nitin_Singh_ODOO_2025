@@ -93,7 +93,7 @@ const ReWearLanding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-maroon-50 via-white to-teal-50">
 
 
       {/* Hero Section */}
@@ -104,7 +104,7 @@ const ReWearLanding = () => {
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Swap, Share,{' '}
-                  <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-maroon-600 to-teal-600 bg-clip-text text-transparent">
                     Sustain
                   </span>
                 </h1>
@@ -114,11 +114,12 @@ const ReWearLanding = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <Link to="/swipe">
+                <button className="bg-gradient-to-r from-maroon-600 to-teal-600 text-black px-8 py-4 rounded-full text-lg font-semibold hover:from-maroon-700 hover:to-teal-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
                   Start Swapping
                 </button>
-                <Link to="/items"></Link>
-                <button className="border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-emerald-50 transition-all flex items-center justify-center gap-2">
+              </Link>
+                <button className="border-2 border-maroon-600 text-maroon-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-maroon-50 transition-all flex items-center justify-center gap-2">
                   Browse Items
                   <ArrowRight className="w-5 h-5" />
                 </button>
@@ -127,7 +128,7 @@ const ReWearLanding = () => {
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full border-2 border-white"></div>
+                    <div key={i} className="w-8 h-8 bg-gradient-to-br from-maroon-400 to-teal-500 rounded-full border-2 border-white"></div>
                   ))}
                 </div>
                 <span>Join 50,000+ sustainable fashion lovers</span>
@@ -135,12 +136,12 @@ const ReWearLanding = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-3xl blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-maroon-500/20 to-teal-500/20 rounded-3xl blur-3xl"></div>
               <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4">
-                    <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl p-4 transform rotate-2 hover:rotate-0 transition-transform">
-                      <div className="w-full h-32 bg-gradient-to-br from-emerald-300 to-teal-300 rounded-xl mb-2"></div>
+                    <div className="bg-gradient-to-br from-blue-100 to-teal-100 rounded-2xl p-4 transform rotate-2 hover:rotate-0 transition-transform">
+                      <div className="w-full h-32 bg-gradient-to-br from-blue-300 to-teal-300 rounded-xl mb-2"></div>
                       <p className="text-sm font-medium text-gray-800">Vintage Jacket</p>
                       <p className="text-xs text-gray-600">45 points</p>
                     </div>
@@ -177,8 +178,8 @@ const ReWearLanding = () => {
               const Icon = stat.icon;
               return (
                 <div key={index} className="text-center group">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
-                    <Icon className="w-8 h-8 text-white" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-maroon-500 to-teal-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
+                    <Icon className="w-8 h-8 text-black" />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
@@ -190,7 +191,7 @@ const ReWearLanding = () => {
       </section>
 
       {/* Featured Items Carousel */}
-      <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50">
+      <section className="py-20 bg-gradient-to-r from-maroon-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Items</h2>
@@ -211,10 +212,10 @@ const ReWearLanding = () => {
                           alt={item.title}
                           className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                         />
-                        <div className="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <div className="absolute top-4 left-4 bg-maroon-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                           {item.condition}
                         </div>
-                        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-emerald-600">
+                        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold text-maroon-600">
                           {item.points} pts
                         </div>
                       </div>
@@ -225,7 +226,7 @@ const ReWearLanding = () => {
                         </div>
                         <p className="text-gray-600 mb-4">{item.brand}</p>
                         <div className="flex items-center justify-between">
-                          <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">
+                          <span className="bg-maroon-100 text-maroon-700 px-3 py-1 rounded-full text-sm">
                             {item.category}
                           </span>
                           <div className="flex items-center text-yellow-400">
@@ -263,7 +264,7 @@ const ReWearLanding = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentSlide ? 'bg-emerald-600' : 'bg-gray-300'
+                  index === currentSlide ? 'bg-maroon-600' : 'bg-gray-300'
                 }`}
               />
             ))}
@@ -272,16 +273,16 @@ const ReWearLanding = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-20 bg-gradient-to-r from-maroon-600 to-teal-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-black mb-6">
             Ready to Transform Your Wardrobe?
           </h2>
-          <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-maroon-100 mb-8 max-w-2xl mx-auto">
             Join the sustainable fashion revolution. Start swapping, sharing, and making a difference today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-emerald-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-emerald-50 transition-all transform hover:scale-105 shadow-lg">
+            <button className="bg-white text-maroon-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-maroon-50 transition-all transform hover:scale-105 shadow-lg">
               List an Item
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-all">
@@ -297,7 +298,7 @@ const ReWearLanding = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-maroon-500 to-teal-600 rounded-lg flex items-center justify-center">
                   <Recycle className="w-5 h-5 text-white" />
                 </div>
                 <span className="text-xl font-bold">ReWear</span>

@@ -10,6 +10,9 @@ import SwipeCards from "./pages/Swipe";
 import Dashboard from "./pages/Dashboard";
 import AuthForm from "./pages/AuthForm";
 import ReWearLanding from "./pages/Home";
+import Layout from "./components/layout/Layout";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const queryClient = new QueryClient();
 
@@ -20,15 +23,19 @@ const Routes = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <Layout>
+            <RouterRoutes>
+              <Route path="/" element={<ReWearLanding />} />
+              <Route path="/admin" element={<AdminPanel />} />
+              <Route path="/swipe" element={<SwipeCards />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/auth" element={<AuthForm />} />
+              <Route path="*" element={<NotFound />} />
+            </RouterRoutes>
+          </Layout>
           {/* ✅ Use RouterRoutes, not Routes */}
-          <RouterRoutes>
-            <Route path="/" element={<ReWearLanding />} />
-            <Route path="/admin" element={<AdminPanel />} />
-            <Route path="/swipe" element={<SwipeCards />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/auth" element={<AuthForm />} />
-            <Route path="*" element={<NotFound />} />
-          </RouterRoutes>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

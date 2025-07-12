@@ -39,7 +39,7 @@ function AuthForm({ type }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md"
+      className="bg-maroon shadow-lg rounded-lg p-6 w-full max-w-md"
     >
       <h2 className="text-2xl font-bold mb-4">
         {type === "login" ? "Login" : "Register"}
@@ -77,7 +77,7 @@ function AuthForm({ type }) {
       <button
         type="submit"
         disabled={mutation.isLoading}
-        className="bg-maroon text-white px-4 py-2 w-full rounded hover:bg-primary transition"
+        className="bg-white text-maroon px-4 py-2 w-full rounded hover:bg-primary transition"
       >
         {mutation.isLoading
           ? "Processing..."
