@@ -1,3 +1,11 @@
+# Problem Statement 3:- ReWear – Community Clothing Exchange
+# Team Members Name and Email
+## Nitin Singh (TL) - ni3.singh.r@gmail.com
+## Nirmal Vishwakarma - nmr71698@gmail.com
+## Rishabh Amar - rishabhamar1234@gmail.com
+## Athulya Santosh Pillai - athulyapillai2006@gmail.com
+
+
 # ReWear – Community Clothing Exchange
 
 ## Overview:
